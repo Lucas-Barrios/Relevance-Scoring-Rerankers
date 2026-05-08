@@ -16,6 +16,9 @@ def chunk_pdf(
     doc_id: str,
     doc_title: str,
     category: str = "regulation",
+    source_type: str = "legal_document",
+    file_type: str = "pdf",
+    language: str = "en",
     chunk_size: int = CHUNK_SIZE,
     overlap: int = CHUNK_OVERLAP,
 ) -> List[Dict]:
@@ -23,8 +26,6 @@ def chunk_pdf(
     reader = PdfReader(path)
     chunks = []
     chunk_index = 0
-
-    source_type = "legal_document" if category == "regulation" else "pdf"
 
     for page_num, page in enumerate(reader.pages, start=1):
         text = page.extract_text() or ""
@@ -38,6 +39,7 @@ def chunk_pdf(
                 "text": chunk_text,
                 "metadata": {
                     "source_type": source_type,
+                    "file_type": file_type,
                     "doc_id": doc_id,
                     "doc_title": doc_title,
                     "category": category,
@@ -47,7 +49,7 @@ def chunk_pdf(
                     "chunk_id": chunk_id,
                     "parent_id": parent_id,
                     "char_count": len(chunk_text),
-                    "language": "en",
+                    "language": language,
                 },
             })
             chunk_index += 1
@@ -59,6 +61,9 @@ def chunk_transcript(
     path: str,
     doc_id: str,
     doc_title: str,
+    source_type: str = "podcast_transcript",
+    file_type: str = "transcript",
+    language: str = "en",
     chunk_size: int = CHUNK_SIZE,
     overlap: int = CHUNK_OVERLAP,
 ) -> List[Dict]:
@@ -73,7 +78,8 @@ def chunk_transcript(
             "chunk_id": chunk_id,
             "text": chunk_text,
             "metadata": {
-                "source_type": "podcast_transcript",
+                "source_type": source_type,
+                "file_type": file_type,
                 "doc_id": doc_id,
                 "doc_title": doc_title,
                 "category": "podcast",
@@ -84,7 +90,7 @@ def chunk_transcript(
                 "chunk_id": chunk_id,
                 "parent_id": parent_id,
                 "char_count": len(chunk_text),
-                "language": "en",
+                "language": language,
             },
         })
 

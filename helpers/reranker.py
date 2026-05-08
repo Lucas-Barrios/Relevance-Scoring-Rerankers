@@ -80,3 +80,7 @@ def crossencoder_rerank(
         print("sentence-transformers not installed.")
         print("To enable: uncomment sentence-transformers and torch in requirements.txt, then pip install.")
         return candidates[:top_n]
+    except Exception as exc:
+        print(f"CrossEncoder unavailable ({type(exc).__name__}: {exc})")
+        print("Returning baseline candidate order for the optional CrossEncoder step.")
+        return candidates[:top_n]

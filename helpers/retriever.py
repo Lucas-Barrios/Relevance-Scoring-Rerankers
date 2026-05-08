@@ -12,7 +12,7 @@ def get_index():
     api_key = os.getenv("PINECONE_API_KEY")
     if not api_key:
         raise RuntimeError("PINECONE_API_KEY is not set; skipping Pinecone retrieval call.")
-    pc = Pinecone(api_key=api_key)
+    pc = Pinecone(api_key=api_key, timeout=60)
     return pc.Index(os.getenv("PINECONE_INDEX_NAME", "relevance-scoring-lab"))
 
 
