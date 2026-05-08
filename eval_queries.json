@@ -1,0 +1,50 @@
+[
+  {
+    "query_id": "q1",
+    "query": "What AI practices are prohibited under the EU AI Act?",
+    "relevant_chunk_ids": [],
+    "relevance_map": {},
+    "filter": {"category": {"$eq": "regulation"}},
+    "notes": "After running Section 4, review baseline results and add chunk_ids of relevant chunks here. Use relevance_map for graded labels: 2=highly relevant, 1=somewhat relevant."
+  },
+  {
+    "query_id": "q2",
+    "query": "How does the EU AI Act define high-risk AI systems?",
+    "relevant_chunk_ids": [],
+    "relevance_map": {},
+    "filter": {"category": {"$eq": "regulation"}},
+    "notes": "Annex III of the EU AI Act lists high-risk categories."
+  },
+  {
+    "query_id": "q3",
+    "query": "What transparency obligations apply to AI systems under EU law?",
+    "relevant_chunk_ids": [],
+    "relevance_map": {},
+    "filter": null,
+    "notes": "Cross-document query — no filter applied. Should retrieve from both regulation and podcast."
+  },
+  {
+    "query_id": "q4",
+    "query": "What are the key principles of trustworthy AI?",
+    "relevant_chunk_ids": [],
+    "relevance_map": {},
+    "filter": {"source_type": {"$eq": "podcast_transcript"}},
+    "notes": "Podcast-focused query. Filter to podcast_transcript only."
+  },
+  {
+    "query_id": "q5",
+    "query": "How should AI systems handle fundamental rights in the EU?",
+    "relevant_chunk_ids": [],
+    "relevance_map": {},
+    "filter": null,
+    "notes": "Cross-document query. Tests cross-corpus retrieval quality."
+  },
+  {
+    "query_id": "q6",
+    "query": "What conformity assessment procedures are required for high-risk AI?",
+    "relevant_chunk_ids": [],
+    "relevance_map": {},
+    "filter": {"category": {"$eq": "regulation"}},
+    "notes": "Technical compliance query. Chapter IV of EU AI Act covers this."
+  }
+]
