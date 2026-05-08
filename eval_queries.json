@@ -2,49 +2,131 @@
   {
     "query_id": "q1",
     "query": "What AI practices are prohibited under the EU AI Act?",
-    "relevant_chunk_ids": [],
-    "relevance_map": {},
+    "relevant_chunk_ids": [
+      "eu_ai_act_p12_c1",
+      "eu_ai_act_p9_c0",
+      "eu_ai_act_p44_c1",
+      "eu_ai_act_p45_c0"
+    ],
+    "relevance_map": {
+      "eu_ai_act_p12_c1": 2,
+      "eu_ai_act_p9_c0":  2,
+      "eu_ai_act_p44_c1": 2,
+      "eu_ai_act_p45_c0": 2
+    },
     "filter": {"category": {"$eq": "regulation"}},
-    "notes": "After running Section 4, review baseline results and add chunk_ids of relevant chunks here. Use relevance_map for graded labels: 2=highly relevant, 1=somewhat relevant."
+    "notes": "Prohibited practices: facial recognition scraping (p12), subliminal distortion (p9), general prohibitions chapter (p44, p45). p51 is AI literacy — not relevant."
   },
   {
     "query_id": "q2",
     "query": "How does the EU AI Act define high-risk AI systems?",
-    "relevant_chunk_ids": [],
-    "relevance_map": {},
+    "relevant_chunk_ids": [
+      "eu_ai_act_p127_c0",
+      "eu_ai_act_p55_c1",
+      "eu_ai_act_p53_c2",
+      "eu_ai_act_p53_c1",
+      "eu_ai_act_p14_c0",
+      "eu_ai_act_p14_c1"
+    ],
+    "relevance_map": {
+      "eu_ai_act_p127_c0": 2,
+      "eu_ai_act_p55_c1":  2,
+      "eu_ai_act_p53_c2":  2,
+      "eu_ai_act_p53_c1":  2,
+      "eu_ai_act_p14_c0":  1,
+      "eu_ai_act_p14_c1":  1
+    },
     "filter": {"category": {"$eq": "regulation"}},
-    "notes": "Annex III of the EU AI Act lists high-risk categories."
+    "notes": "Annex III lists high-risk categories (p127). Article 6 classification rules (p53). Risk factors for outcomes (p55). p14 covers related regulations — somewhat relevant."
   },
   {
     "query_id": "q3",
     "query": "What transparency obligations apply to AI systems under EU law?",
-    "relevant_chunk_ids": [],
-    "relevance_map": {},
+    "relevant_chunk_ids": [
+      "hleg_guidelines_en_p20_c0",
+      "eu_ai_act_p82_c0",
+      "eu_ai_act_p21_c0",
+      "eu_ai_act_p82_c1",
+      "hleg_guidelines_en_p8_c1"
+    ],
+    "relevance_map": {
+      "hleg_guidelines_en_p20_c0": 2,
+      "eu_ai_act_p82_c0":          2,
+      "eu_ai_act_p21_c0":          2,
+      "eu_ai_act_p82_c1":          2,
+      "hleg_guidelines_en_p8_c1":  1
+    },
     "filter": null,
-    "notes": "Cross-document query — no filter applied. Should retrieve from both regulation and podcast."
+    "notes": "HLEG transparency requirement section (p20). EU AI Act transparency obligations for high-risk systems (p82). Recital on opacity concerns (p21). Cross-document query."
   },
   {
     "query_id": "q4",
     "query": "What are the key principles of trustworthy AI?",
-    "relevant_chunk_ids": [],
-    "relevance_map": {},
+    "relevant_chunk_ids": [
+      "trustworthy_ai_podcast_c1",
+      "trustworthy_ai_podcast_c2",
+      "trustworthy_ai_podcast_c8",
+      "trustworthy_ai_podcast_c6",
+      "trustworthy_ai_podcast_c0",
+      "trustworthy_ai_podcast_c5",
+      "trustworthy_ai_podcast_c4"
+    ],
+    "relevance_map": {
+      "trustworthy_ai_podcast_c1": 2,
+      "trustworthy_ai_podcast_c2": 2,
+      "trustworthy_ai_podcast_c8": 2,
+      "trustworthy_ai_podcast_c6": 2,
+      "trustworthy_ai_podcast_c0": 1,
+      "trustworthy_ai_podcast_c5": 1,
+      "trustworthy_ai_podcast_c4": 1
+    },
     "filter": {"source_type": {"$eq": "podcast_transcript"}},
-    "notes": "Podcast-focused query. Filter to podcast_transcript only."
+    "notes": "Podcast-only query. Operationalizing trustworthy AI (c1), fundamental rights (c2), human autonomy (c8), environmental well-being (c6) are highly relevant. c0 is intro — somewhat relevant."
   },
   {
     "query_id": "q5",
     "query": "How should AI systems handle fundamental rights in the EU?",
-    "relevant_chunk_ids": [],
-    "relevance_map": {},
+    "relevant_chunk_ids": [
+      "hleg_guidelines_en_p12_c1",
+      "hleg_guidelines_en_p13_c1",
+      "hleg_guidelines_en_p13_c2",
+      "hleg_guidelines_en_p11_c2",
+      "hleg_guidelines_en_p11_c1",
+      "hleg_guidelines_en_p12_c0",
+      "hleg_guidelines_en_p17_c1"
+    ],
+    "relevance_map": {
+      "hleg_guidelines_en_p12_c1": 2,
+      "hleg_guidelines_en_p13_c1": 2,
+      "hleg_guidelines_en_p13_c2": 2,
+      "hleg_guidelines_en_p11_c2": 2,
+      "hleg_guidelines_en_p11_c1": 2,
+      "hleg_guidelines_en_p12_c0": 1,
+      "hleg_guidelines_en_p17_c1": 1
+    },
     "filter": null,
-    "notes": "Cross-document query. Tests cross-corpus retrieval quality."
+    "notes": "HLEG section 2.1 Fundamental rights as basis for Trustworthy AI (p12). Citizens rights and AI (p13). EU Charter context (p11). Baseline retrieves all from HLEG EN — well-matched query."
   },
   {
     "query_id": "q6",
     "query": "What conformity assessment procedures are required for high-risk AI?",
-    "relevant_chunk_ids": [],
-    "relevance_map": {},
+    "relevant_chunk_ids": [
+      "eu_ai_act_p78_c0",
+      "eu_ai_act_p78_c1",
+      "eu_ai_act_p133_c0",
+      "eu_ai_act_p80_c0",
+      "eu_ai_act_p32_c1",
+      "eu_ai_act_p54_c0"
+    ],
+    "relevance_map": {
+      "eu_ai_act_p78_c0":  2,
+      "eu_ai_act_p78_c1":  2,
+      "eu_ai_act_p133_c0": 2,
+      "eu_ai_act_p80_c0":  2,
+      "eu_ai_act_p32_c1":  1,
+      "eu_ai_act_p54_c0":  1
+    },
     "filter": {"category": {"$eq": "regulation"}},
-    "notes": "Technical compliance query. Chapter IV of EU AI Act covers this."
+    "notes": "Article 43 Conformity assessment (p78). Annex VI conformity procedure based on internal control (p133). Notified bodies (p80). New Legislative Framework context (p32) — somewhat relevant."
   }
 ]
